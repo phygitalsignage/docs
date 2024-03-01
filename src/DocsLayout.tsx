@@ -5,7 +5,6 @@ const navLinks = [
     { to: "/", label: "Документация" },
     { to: "/how-it-works", label: "Как это работает?" },
     { to: "/getting-started", label: "Подключение" },
-    { to: "/signup", label: "Регистрация"},
     { to: "/devices", label: "Совместимые устройства" },
     { to: "/download", label: "Скачать приложение" }
 ];
@@ -26,7 +25,7 @@ export const DocsLayout = () => {
                             <NavLink key={index} to={link.to}
                                 className={({ isActive }) =>
                                     [
-                                        isActive ? "text-blue-600" : "",
+                                        isActive ? "text-blue-600 font-medium" : "",
                                         "hover:bg-neutral-100 transition h-10 px-3 flex items-center rounded-lg"
                                     ].join(" ")
                                 }

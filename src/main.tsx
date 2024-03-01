@@ -12,11 +12,9 @@ import { Download } from './pages/Download';
 import { Home } from './pages/Home';
 import { GettingStarted } from './pages/GettingStarted';
 import { Support } from './pages/Support';
-import { SignUp } from './pages/SignUp';
 
 const router = createBrowserRouter([
     {
-        path: "/",
         children: [
             {
                 element: <DocsLayout />,
@@ -44,15 +42,15 @@ const router = createBrowserRouter([
                     {
                         path: "download",
                         element: <Download />
-                    },
-                    {
-                        path: 'signup',
-                        element: <SignUp />
                     }
                 ]
             } 
         ]
     },
+    {
+        path: "*", 
+        element: <div>not found</div>
+    }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
