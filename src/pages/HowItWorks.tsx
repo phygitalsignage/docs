@@ -1,5 +1,7 @@
+import { PageTitle } from "../components/PageTitle"
+
 export const HowItWorks = () => {
     return (
-        <div>HowItWorks</div>
+        <PageTitle title="Как это работает?" />
     )
 }

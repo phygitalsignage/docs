@@ -1,4 +1,4 @@
-export const RecommendedDevices = () => {
+export const Devices = () => {
     return (
         <div>
         </div>

@@ -5,10 +5,14 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import { RecommendedDevices } from './pages/RecommendedDevices';
+import { Devices } from './pages/Devices';
 import { HowItWorks } from './pages/HowItWorks';
 import { DocsLayout } from './DocsLayout';
 import { Download } from './pages/Download';
+import { Home } from './pages/Home';
+import { GettingStarted } from './pages/GettingStarted';
+import { Support } from './pages/Support';
+import { SignUp } from './pages/SignUp';
 
 const router = createBrowserRouter([
     {
@@ -19,7 +23,11 @@ const router = createBrowserRouter([
                 children: [
                     {
                         path: "",
-                        element: <div>asd</div>
+                        element: <Home />
+                    },
+                    {
+                        path: "getting-started",
+                        element: <GettingStarted />
                     },
                     {
                         path: "how-it-works",
@@ -27,11 +35,19 @@ const router = createBrowserRouter([
                     },
                     {
                         path: "devices",
-                        element: <RecommendedDevices />
+                        element: <Devices />
+                    },
+                    {
+                        path: "support", 
+                        element: <Support />
                     },
                     {
                         path: "download",
                         element: <Download />
+                    },
+                    {
+                        path: 'signup',
+                        element: <SignUp />
                     }
                 ]
             } 
