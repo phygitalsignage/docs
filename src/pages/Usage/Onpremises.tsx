@@ -1,11 +1,12 @@
-import { PageHeader } from "../components/PageHeader"
-import { WorkInProgress } from "../components/WorkInProgress"
+import { PageHeader } from "../../components/PageHeader"
+import { WorkInProgress } from "../../components/WorkInProgress"
 
-export const Support = () => {
+export const Onpremises = () => {
     return (
         <>
             <PageHeader
-                page="support"
+                page="onpremises"
+                parentPage="usage"
                 updatedAt={
                     {
                         day: 3,

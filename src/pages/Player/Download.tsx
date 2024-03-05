@@ -1,12 +1,24 @@
-import GooglePlayBadgeSrc from "../assets/google-play-badge.png"
-import { InfoBlock } from "../components/InfoBlock"
-import { PageTitle } from "../components/PageTitle"
-import { SubTitle } from "../components/SubTitle"
+import GooglePlayBadgeSrc from "../../assets/google-play-badge.png"
+import { InfoBlock } from "../../components/InfoBlock"
+import { SubTitle } from "../../components/SubTitle"
+import { pages } from "../../pages"
+import { DocsLink } from "../../components/DocsLink"
+import { PageHeader } from "../../components/PageHeader"
 
 export const Download = () => {
     return (
         <>
-            <PageTitle title="Скачать приложение" />
+            <PageHeader
+                page="download"
+                parentPage="player"
+                updatedAt={
+                    {
+                        day: 3,
+                        month: 3,
+                        year: 24
+                    }
+                }
+            />
             <p>
                 Чтобы управлять контентом на экранах с помощью Фиджитал вам необходимо установить приложение нашего плеера на экран или устройство, которое подключено к экрану.
             </p>
@@ -32,6 +44,9 @@ export const Download = () => {
             <InfoBlock>
                 При установке через .apk файл обновление приложения необходимо будет осуществлять вручную. 
             </InfoBlock>
+            <div>
+                <DocsLink to={pages.update.route}>Узнать больше об обновлении приложения</DocsLink>
+            </div>
         </>
     )
 }

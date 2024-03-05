@@ -1,18 +1,42 @@
-import { Link, Outlet, NavLink } from "react-router-dom";
+import { Link, Outlet, ScrollRestoration, useLocation } from "react-router-dom";
 import { Logo } from "./components/Logo";
+import { TopLevelNav } from "./components/Navigations/TopLevelNav";
+import { PlayerNav } from "./components/Navigations/PlayerNav";
+import { ServiceNav } from "./components/Navigations/ServiceNav";
+import { UsageNav } from "./components/Navigations/UsageNav";
+import { CMSNav } from "./components/Navigations/CMSNav";
+import { TroubleshootingNav } from "./components/Navigations/TroubleshootingNav";
+import { SubscriptionNav } from "./components/Navigations/SubscriptionNav";
+import { ContentNav } from "./components/Navigations/ContentNav";
 
-const navLinks = [
-    { to: "/", label: "Документация" },
-    { to: "/how-it-works", label: "Как это работает?" },
-    { to: "/getting-started", label: "Подключение" },
-    { to: "/devices", label: "Совместимые устройства" },
-    { to: "/download", label: "Скачать приложение" }
-];
+const topLevelRoutes = [
+    '',
+    'support'
+]
+
+interface NavComponents {
+    [key: string]: JSX.Element;
+}
+
+const navComponents: NavComponents = {
+    "player": <PlayerNav />,
+    "service": <ServiceNav />,
+    "usage": <UsageNav />,
+    "cms": <CMSNav />,
+    "troubleshooting": <TroubleshootingNav />,
+    "subscription": <SubscriptionNav />,
+    "content": <ContentNav />
+};
 
 export const DocsLayout = () => {
+    const location = useLocation()
+
+    const firstPartOfRoute = location.pathname.split("/")[1];
+
     return (
         <>
-            <div className="flex min-h-screen w-full max-w-screen-xl mx-auto">
+            <ScrollRestoration />
+            <div className="md:flex md:min-h-screen w-full max-w-screen-xl mx-auto">
                 <div className="w-[300px] shrink-0 p-5">
                     <Link to="/" className="flex items-center p-3 px-5 rounded-xl transition gap-3" draggable={false}>
                         <Logo height={8}/>
@@ -21,22 +45,12 @@ export const DocsLayout = () => {
                         </div>
                     </Link>
                     <div className="flex flex-col my-5">
-                        {navLinks.map((link, index) => (
-                            <NavLink key={index} to={link.to}
-                                className={({ isActive }) =>
-                                    [
-                                        isActive ? "text-blue-600 font-medium" : "",
-                                        "hover:bg-neutral-100 transition h-10 px-3 flex items-center rounded-lg"
-                                    ].join(" ")
-                                }
-                                draggable={false}>
-                                {link.label}
-                            </NavLink>
-                        ))}
+                        {topLevelRoutes.includes(firstPartOfRoute) && <TopLevelNav />}
+                        {navComponents[firstPartOfRoute]}
                     </div>
                 </div>
                 <div className="flex-1 px-10 my-10">
-                    <div className="max-w-[750px] text-lg">
+                    <div className="max-w-[750px] mb-20">
                         <Outlet />
                     </div>
                 </div>

@@ -1,10 +1,24 @@
-import { PageTitle } from "../components/PageTitle"
-import { SubTitle } from "../components/SubTitle"
+import { PageHeader } from "../../components/PageHeader"
+import { Paragraph } from "../../components/Paragraph"
+import { SubTitle } from "../../components/SubTitle"
+import { SupportLink } from "../../components/SupportLink"
+import { WorkInProgress } from "../../components/WorkInProgress"
 
 export const Devices = () => {
     return (
         <div>
-            <PageTitle title="Устройства" />
+            <PageHeader
+                page="devices"
+                parentPage="player"
+                updatedAt={
+                    {
+                        day: 3,
+                        month: 3,
+                        year: 24
+                    }
+                }
+            />
+            <WorkInProgress />
             <div>
                 Фиджитал можно использовать практически с любыми экранами: с телевизорами, профессиональными дисплеями, мониторами, менюбордами, светодиодными экранами, видеостенами, проекторами и планшетами.
             </div>
@@ -31,6 +45,11 @@ export const Devices = () => {
             <div>
                 Для подключения светодиодных экранов и проекторов, необходимо подключить Android приставку по HDMI к контроллеру экрана или проектору.
             </div>
+            <SubTitle title="Не нашли свое устройство?" />
+            <Paragraph>
+                Если у вас есть уже есть экраны, приставки или Smart TV и вы хотите узнать будет ли работать на нем Фиджитал, обратитесь в службу поддержки и наш технический специалист проверит возможность установки нашего приложения.
+            </Paragraph>
+            <SupportLink/>
         </div>
     )
 }
