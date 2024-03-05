@@ -2,12 +2,12 @@ import React from "react";
 import { Breadcrumbs } from "../components/Breadcrumbs";
 import { PageTitle } from "../components/PageTitle";
 import { UpdatedAt } from "../components/UpdatedAt";
-import { pages, Pages } from "../pages";
+import { pages, PageName } from "../pages";
 
 interface PageHeaderProps {
-  page: keyof Pages;
-  parentPage?: keyof Pages;
-  updatedAt?: { day: number; month: number; year: number };
+    page: PageName;
+    parentPage?: PageName;
+    updatedAt?: { day: number; month: number; year: number };
 }
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ page, parentPage, updatedAt }) => {

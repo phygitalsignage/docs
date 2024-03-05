@@ -1,5 +1,5 @@
-import { PageTitle } from "../components/PageTitle"
-import { SubTitle } from "../components/SubTitle"
+import { PageTitle } from "../../components/PageTitle"
+import { SubTitle } from "../../components/SubTitle"
 
 export const Triggers = () => {
     return (
