@@ -9,7 +9,9 @@ export const TopLevelNav = () => {
         "cms",
         "subscription",
         "player",
+        "screens",
         "content",
+        "playlists",
         "troubleshooting",
         "support"
     ] as PageName[];

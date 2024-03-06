@@ -40,6 +40,29 @@ Google Play, APK файл
                 Подробнее см. <DocsLink to={pages.offlineMode.route}>{pages.offlineMode.label}</DocsLink>
                 </div>
             </InfoBlock>
+            <SubTitle title="Поворот экрана"/>
+            <Paragraph>
+                С Фиджитал вам не нужно поворачивать контент в редакторе видео или изображений.
+            </Paragraph>
+            <Paragraph>
+                Вы можете программно поворачивать контент, даже если экран не поддерживает возможность изменения ориентации.
+            </Paragraph>
+            <Paragraph>
+                Таким образом, вы сможете создавать вертикальные плейлисты для экранов, которые расположены в портретном режиме.
+            </Paragraph>
+            <Paragraph>
+                Поворот экрана осуществляется через <DocsLink to={pages.cms.route}>личный кабинет</DocsLink>.
+            </Paragraph>
+            <Paragraph>
+                Подробнее см. <DocsLink to={pages.screenRotation.route}>{pages.screenRotation.label}</DocsLink>
+            </Paragraph>
+            <SubTitle title="Режим киоска" />
+            <Paragraph>
+                Приложение автоматически открывается при перезагрузке устройства.
+            </Paragraph>
+            <Paragraph>
+                Если свернуть или закрыть приложение, то оно автоматически откроется в течении 5 минут в зависимости от устройства и версии приложения.
+            </Paragraph>
             <SubTitle title="Кеширование контента" />
             <Paragraph>
                 Приложение плеера Фиджитал автоматически сохраняет в память устройства изображения и видео, которые планируется воспроизводить на экране.

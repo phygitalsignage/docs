@@ -8,6 +8,8 @@ import { CMSNav } from "./components/Navigations/CMSNav";
 import { TroubleshootingNav } from "./components/Navigations/TroubleshootingNav";
 import { SubscriptionNav } from "./components/Navigations/SubscriptionNav";
 import { ContentNav } from "./components/Navigations/ContentNav";
+import { ScreensNav } from "./components/Navigations/ScreensNav";
+import { PlaylistsNav } from "./components/Navigations/PlaylistsNav";
 
 const topLevelRoutes = [
     '',
@@ -25,7 +27,9 @@ const navComponents: NavComponents = {
     "cms": <CMSNav />,
     "troubleshooting": <TroubleshootingNav />,
     "subscription": <SubscriptionNav />,
-    "content": <ContentNav />
+    "content": <ContentNav />,
+    "screens": <ScreensNav />,
+    "playlists": <PlaylistsNav />,
 };
 
 export const DocsLayout = () => {

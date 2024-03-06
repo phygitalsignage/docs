@@ -25,6 +25,9 @@ export const Home = () => {
                     group={pages.cms}
                 />
                 <HomeLinkGroups
+                    group={pages.screens}
+                />
+                <HomeLinkGroups
                     group={pages.player}
                 />
                 <HomeLinkGroups

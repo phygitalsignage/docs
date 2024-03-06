@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { DocsLayout } from './DocsLayout';
 import { Update } from './pages/Player/Update';
-import { Download } from './pages/Player/Download';
+import { Install } from './pages/Player/Install';
 import { Devices } from './pages/Player/Devices';
 import { Player } from './pages/Player';
 import { PlayerRequirements } from './pages/Player/PlayerRequirements';
@@ -40,6 +40,10 @@ import { Upload } from './pages/Content/Upload';
 import { SupportedFormats } from './pages/Content/SupportedFormats';
 import { ContentUploadTroubleshooting } from './pages/Troubleshooting/ContentUploadTroubleshooting';
 import { DeletingContent } from './pages/Content/DeletingContent';
+import { ScreenRotation } from './pages/Screens/ScreenRotation';
+import { Screens } from './pages/Screens';
+import { Playlists } from './pages/Playlists';
+import { UpdateTime } from './pages/Playlists/UpdateTime';
 
 const content = {
     path: "content",
@@ -115,6 +119,20 @@ const troubleshooting = {
     ]
 }
 
+const screens = {
+    path: "screens",
+    children: [
+        {
+            path: "",
+            element: <Screens />
+        },
+        {
+            path: "screen-rotation",
+            element: <ScreenRotation />
+        }
+    ]
+}
+
 const cms = {
     path: "cms",
     children: [
@@ -137,7 +155,7 @@ const cms = {
         {
             path: "sign-in",
             element: <SignIn />
-        }
+        },
     ]
 }
 
@@ -153,8 +171,8 @@ const player = {
             element: <Devices />
         },
         {
-            path: "download",
-            element: <Download />
+            path: "install",
+            element: <Install />
         },
         {
             path: "update",
@@ -211,6 +229,20 @@ const usage = {
     ]
 }
 
+const playlists = {
+    path: "playlists",
+    children: [
+        {
+            path: "",
+            element: <Playlists />
+        },
+        {
+            path: "update-time",
+            element: <UpdateTime />
+        },
+    ]
+}
+
 const router = createBrowserRouter([
     {
         children: [
@@ -231,7 +263,9 @@ const router = createBrowserRouter([
                     cms,
                     troubleshooting,
                     subscription,
-                    content
+                    content,
+                    screens,
+                    playlists
                 ]
             } 
         ]

@@ -8,7 +8,7 @@ export type PageName =
     | "documentation"
     | "player"
     | "devices"
-    | "download"
+    | "install"
     | "update"
     | "playerRequirements"
     | "service"
@@ -39,6 +39,10 @@ export type PageName =
     | "supportedFormats"
     | "contentUploadTroubleshooting"
     | "deletingContent"
+    | "screens"
+    | "screenRotation"
+    | "playlists"
+    | "updateTime"
 
 export interface PageConfig {
     label: string
@@ -56,7 +60,7 @@ export const pages: Record<PageName, PageConfig> = {
         route: "/player",
         children: [
             "devices",
-            "download",
+            "install",
             "update",
             "playerRequirements",
             "offlineMode",
@@ -66,16 +70,16 @@ export const pages: Record<PageName, PageConfig> = {
         label: "Устройства",
         route: "/player/devices",
     },
-    download: {
-        label: "Загрузка приложения",
-        route: "/player/download",
+    install: {
+        label: "Установка приложения",
+        route: "/player/install",
     },
     update: {
         label: "Обновление приложения",
         route: "/player/update",
     },
     playerRequirements: {
-        label: "Требования",
+        label: "Плеер — Минимальные требования",
         route: "/player/requirements",
     },
     service: {
@@ -206,5 +210,23 @@ export const pages: Record<PageName, PageConfig> = {
     contentUploadTroubleshooting: {
         label: "Не получается загрузить контент",
         route: "/troubleshooting/upload-content",
+    },
+    screens: {
+        label: "Экраны",
+        route: "/screens",
+        children: ["screenRotation"],
+    },
+    screenRotation: {
+        label: "Поворот экрана",
+        route: "/screens/screen-rotation",
+    },
+    playlists: {
+        label: "Плейлисты",
+        route: "/playlists",
+        children: ["updateTime"],
+    },
+    updateTime: {
+        label: "Скорость обновления плейлистов на экранах",
+        route: "/playlists/update-time",
     },
 }
