@@ -31,6 +31,9 @@ export const Home = () => {
                     group={pages.player}
                 />
                 <HomeLinkGroups
+                    group={pages.server}
+                />
+                <HomeLinkGroups
                     group={pages.troubleshooting}
                 />
             </div>  

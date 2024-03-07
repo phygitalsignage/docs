@@ -10,6 +10,7 @@ import { SubscriptionNav } from "./components/Navigations/SubscriptionNav";
 import { ContentNav } from "./components/Navigations/ContentNav";
 import { ScreensNav } from "./components/Navigations/ScreensNav";
 import { PlaylistsNav } from "./components/Navigations/PlaylistsNav";
+import { ServerNav } from "./components/Navigations/ServerNav";
 
 const topLevelRoutes = [
     '',
@@ -30,6 +31,7 @@ const navComponents: NavComponents = {
     "content": <ContentNav />,
     "screens": <ScreensNav />,
     "playlists": <PlaylistsNav />,
+    "server": <ServerNav />
 };
 
 export const DocsLayout = () => {

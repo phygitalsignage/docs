@@ -44,6 +44,8 @@ import { ScreenRotation } from './pages/Screens/ScreenRotation';
 import { Screens } from './pages/Screens';
 import { Playlists } from './pages/Playlists';
 import { UpdateTime } from './pages/Playlists/UpdateTime';
+import { Server } from './pages/Server';
+import { ServerRequirements } from './pages/Server/ServerRequirements';
 
 const content = {
     path: "content",
@@ -243,6 +245,20 @@ const playlists = {
     ]
 }
 
+const server = {
+    path: "server",
+    children: [
+        {
+            path: "",
+            element: <Server />
+        },
+        {
+            path: "requirements",
+            element: <ServerRequirements />
+        },
+    ]
+}
+
 const router = createBrowserRouter([
     {
         children: [
@@ -265,7 +281,8 @@ const router = createBrowserRouter([
                     subscription,
                     content,
                     screens,
-                    playlists
+                    playlists,
+                    server
                 ]
             } 
         ]

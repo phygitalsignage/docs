@@ -43,6 +43,8 @@ export type PageName =
     | "screenRotation"
     | "playlists"
     | "updateTime"
+    | "server"
+    | "serverRequirements"
 
 export interface PageConfig {
     label: string
@@ -228,5 +230,14 @@ export const pages: Record<PageName, PageConfig> = {
     updateTime: {
         label: "Скорость обновления плейлистов на экранах",
         route: "/playlists/update-time",
+    },
+    server: {
+        label: "Серверное решение",
+        route: "/server",
+        children: ["serverRequirements"],
+    },
+    serverRequirements: {
+        label: "Требования к серверу",
+        route: "/server/requirements",
     },
 }
