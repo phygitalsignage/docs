@@ -45,6 +45,8 @@ export type PageName =
     | "updateTime"
     | "server"
     | "serverRequirements"
+    | "storage"
+    | "optimalResolutionCalculator"
 
 export interface PageConfig {
     label: string
@@ -191,7 +193,15 @@ export const pages: Record<PageName, PageConfig> = {
     content: {
         label: "Контент",
         route: "/content",
-        children: ["supportedFormats", "upload", "duration", "deletingContent"],
+        children: ["supportedFormats", "optimalResolutionCalculator", "storage", "upload", "duration", "deletingContent"],
+    },
+    optimalResolutionCalculator: {
+        label: "Расчет оптимального разрешения",
+        route: "/content/resolution-calculator",
+    },
+    storage: {
+        label: "Хранилище контента",
+        route: "/content/storage"
     },
     upload: {
         label: "Загрузка контента",

@@ -46,6 +46,8 @@ import { Playlists } from './pages/Playlists';
 import { UpdateTime } from './pages/Playlists/UpdateTime';
 import { Server } from './pages/Server';
 import { ServerRequirements } from './pages/Server/ServerRequirements';
+import { Storage } from './pages/Content/Storage';
+import { OptimalResolutionCalculator } from './pages/Content/OptimalResolutionCalculator';
 
 const content = {
     path: "content",
@@ -69,6 +71,14 @@ const content = {
         {
             path: "deleting",
             element: <DeletingContent />
+        },
+        {
+            path: "storage",
+            element: <Storage />
+        },
+        {
+            path: "resolution-calculator",
+            element: <OptimalResolutionCalculator />
         }
     ]
 }
