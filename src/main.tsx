@@ -48,6 +48,7 @@ import { Server } from './pages/Server';
 import { ServerRequirements } from './pages/Server/ServerRequirements';
 import { Storage } from './pages/Content/Storage';
 import { OptimalResolutionCalculator } from './pages/Content/OptimalResolutionCalculator';
+import { SoftwarePros } from './pages/Service/SoftwarePros';
 
 const content = {
     path: "content",
@@ -219,6 +220,10 @@ const service = {
         {
             path: "how-it-works",
             element: <HowItWorks />
+        },
+        {
+            path: "software-pros",
+            element: <SoftwarePros />
         },
     ]
 }

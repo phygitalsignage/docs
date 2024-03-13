@@ -47,6 +47,7 @@ export type PageName =
     | "serverRequirements"
     | "storage"
     | "optimalResolutionCalculator"
+    | "softwarePros"
 
 export interface PageConfig {
     label: string
@@ -89,11 +90,15 @@ export const pages: Record<PageName, PageConfig> = {
     service: {
         label: "О сервисе",
         route: "/service",
-        children: ["howItWorks", "features", "gettingStarted"],
+        children: ["softwarePros", "howItWorks", "features", "gettingStarted"],
     },
     features: {
         label: "Возможности",
         route: "/service/features",
+    },
+    softwarePros: {
+        label: "Преимущества централизованного управления контентом",
+        route: "/service/software-pros",
     },
     gettingStarted: {
         label: "Подключение",

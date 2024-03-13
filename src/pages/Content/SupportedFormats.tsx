@@ -63,7 +63,7 @@ export const SupportedFormats = () => {
                     data={[
                         ['2160p (4K)', <div className='text-center'>35,000</div>],
                         ['1440p (QHD)', <div className='text-center'>16,000</div>],
-                        ['1080p (FullHD)', <div className='text-center'>8,000</div>],
+                        ['1080p (Full HD)', <div className='text-center'>8,000</div>],
                         ['720p', <div className='text-center'>5,000</div>],
                         ['480p', <div className='text-center'>2,500</div>],
                     ]}

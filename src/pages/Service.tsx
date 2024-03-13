@@ -36,6 +36,10 @@ export const Service = () => {
                 ]}
                 ordered={false} 
             />
+            <SubTitle title="Преимущества использования сервисов для управления контентом на экранах" />
+            <Paragraph>
+                См. <DocsLink to={pages.softwarePros.route}>{pages.softwarePros.label}</DocsLink>
+            </Paragraph>
             <SubTitle title="Какие экраны можно подключить к Фиджитал?" />
             <Paragraph>
                 К нашему сервису можно подключить практически любой любой экран.
@@ -43,16 +47,13 @@ export const Service = () => {
             <Paragraph>
                 Подробнее cм. <DocsLink to={pages.devices.route}>{pages.devices.label}</DocsLink>
             </Paragraph>
-            <SubTitle title="Преимущества" />
+            <SubTitle title="Преимущества Фиджитал" />
             <Advantage title="Открытая регистрация и бесплатный тестовый период">
                 Вы самостоятельно можете зарегистрироваться <DocsLink to={pages.cms.route}>в личном кабинете</DocsLink> и попробовать наш сервис без привязки банковской карты или сложного процесса согласования.
             </Advantage>
             <Paragraph>
                 См. <DocsLink to={pages.trial.route}>Подключение бесплатного тестового периода</DocsLink>
             </Paragraph>
-            <Advantage title="Удаленная работа">
-                Вам не обязательно находиться рядом с экранами. Для управления контентом нужен только доступ в интернет и компьютер или ноутбук.
-            </Advantage>
             <Advantage title="Современный и понятный интерфейс">
                 У нас неперегруженный личный кабинет, в котором легко можно разобраться, светлые тона и удобная навигация.
             </Advantage>
