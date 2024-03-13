@@ -51,10 +51,10 @@ export const SupportedFormats = () => {
             </Paragraph>
             <SubTitle title="Видео"/>
             <Paragraph>
-                Поддерживаемые форматы: H.264
+                Поддерживаемые кодеки: H.264
             </Paragraph>
             <Paragraph>
-                Поддерживаемые контейнеры: MPEG-4 (.mp4)
+                Поддерживаемые контейнеры (форматы): MPEG-4 (.mp4)
             </Paragraph>
             <SubTitle title="Рекомендуемый битрейт видео" />
             <div className='text-lg'>
